@@ -3,72 +3,1079 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore the rich history and legacy of Vadiyarajulu, a king of great influence and vision. Learn about their historical contributions and royal legacy.">
-    <meta name="keywords" content="Vadiyarajulu,vaddiya,vadiyaraj, History, Kings of India, Royal Legacy, Ancient History">
-    <meta name="author" content="Siva Thaneeru">
-    <meta name="robots" content="index, follow">
+    <title>Vadiyarajulu Community - Heritage & Cultural Legacy</title>
+    <meta name="description" content="Discover the rich history and cultural legacy of the Vadiyarajulu community. Explore our heritage, traditions, and contributions to society.">
+    <meta name="keywords" content="Vadiyarajulu, community, heritage, culture, history, traditions, legacy">
+    <meta name="author" content="Vadiyarajulu Community">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Vadiyarajulu - The Royal Legacy">
-    <meta property="og:description" content="Discover the rich heritage of the Vadiyarajulu kings and their impact on history.">
-    <meta property="og:image" content="https://yourdomain.com/assets/images/vadiyarajulu-legacy.jpg">
-    <meta property="og:url" content="https://vadiyarajulu.com">
+    <meta property="og:title" content="Vadiyarajulu Community - Heritage & Cultural Legacy">
+    <meta property="og:description" content="Discover the rich history and cultural legacy of the Vadiyarajulu community.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vadiyarajulu.com">
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://vadiyarajulu.com">
-
-    <!-- Page Title -->
-    <title>Vadiyarajulu - The Royal Legacy</title>
-
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8151896636162615" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-8151896636162615">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vadiyarajulu Community - Heritage & Cultural Legacy">
+    <meta name="twitter:description" content="Discover the rich history and cultural legacy of the Vadiyarajulu community.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzEzNzc5MSIvPgo8cGF0aCBkPSJNMTYgOEwxOSAxNEgxM0wxNiA4WiIgZmlsbD0iI0ZGRkZGRiIvPgo8cGF0aCBkPSJNOSAyNEwxMiAxOEg2TDkgMjRaIiBmaWxsPSIjRkZGRkZGIi8+CjxwYXRoIGQ9Ik0yMyAyNEwyNiAxOEgyMEwyMyAyNFoiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+">
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d5a87;
+            --accent-color: #d69e2e;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-light: #f7fafc;
+            --gradient-primary: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+            --gradient-secondary: linear-gradient(135deg, #d69e2e 0%, #ed8936 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-section {
+            background: var(--gradient-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(214, 158, 46, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-elements::before {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            right: 10%;
+            animation-delay: -2s;
+        }
+        
+        .floating-elements::after {
+            width: 120px;
+            height: 120px;
+            bottom: 20%;
+            left: 10%;
+            animation-delay: -4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(20px) rotate(240deg); }
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+            margin: 4rem 0;
+        }
+        
+        .timeline-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid #e2e8f0;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--accent-color);
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--accent-color);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .btn-primary {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(214, 158, 46, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .navbar {
+            background: rgba(26, 54, 93, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .navbar.scrolled {
+            background: rgba(26, 54, 93, 0.98);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(26, 54, 93, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-menu.active {
+            display: flex;
+        }
+        
+        .mobile-menu .nav-link {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .adsense-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+            margin: 2rem 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .adsense-placeholder i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .parallax-overlay {
+            background: rgba(26, 54, 93, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .footer {
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(214, 158, 46, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .hero-section {
+                min-height: 80vh;
+                padding: 2rem 0;
+            }
+            
+            .stats-counter {
+                font-size: 2rem;
+            }
+            
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+    </style>
 </head>
 <body>
-    <div id="header"></div>  <!-- This is where the header will be loaded -->
-    <nav>
-   
-        <button onclick="loadHTML('content','home.html')">Home</button>
-        <button onclick="loadHTML('content','about.html')">About</button>
-        <button onclick="loadHTML('content','contact.html')">Contact</button>
-        <button onclick="loadHTML('content','terms-of-service.html')">Terms</button>
-        <button onclick="loadHTML('content','privacy-policy.html')">privacy-policy</button>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-om text-white text-lg"></i>
+                </div>
+                <span class="text-white font-display text-xl font-bold">Vadiyarajulu</span>
+            </div>
+            
+            <div class="desktop-nav hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#timeline" class="nav-link">Timeline</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="hamburger md:hidden" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
-    <div id="content"></div> <!-- This is where the page-specific content will be loaded -->
-    <div id="footer"></div> 
-    <!-- <section class="ads-placeholder">
-        <p>Google Ads Placeholder - Replace this with your AdSense code</p>
-    </section> -->
-<!-- 
-    <footer>
-        <p>&copy; 2025 Vadiyarajulu History | All Rights Reserved</p>
-    </footer> -->
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="nav-link" onclick="toggleMobileMenu()">Home</a>
+        <a href="#about" class="nav-link" onclick="toggleMobileMenu()">About</a>
+        <a href="#timeline" class="nav-link" onclick="toggleMobileMenu()">Timeline</a>
+        <a href="#blog" class="nav-link" onclick="toggleMobileMenu()">Blog</a>
+        <a href="#contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
+        <div class="mt-8">
+            <a href="#terms" class="text-white/70 hover:text-white mr-4" onclick="toggleMobileMenu()">Terms</a>
+            <a href="#privacy" class="text-white/70 hover:text-white mr-4" onclick="toggleMobileMenu()">Privacy</a>
+            <a href="#disclaimer" class="text-white/70 hover:text-white" onclick="toggleMobileMenu()">Disclaimer</a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="floating-elements"></div>
+        <div class="container mx-auto px-4 hero-content">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h1 class="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Vadiyarajulu <span class="text-yellow-400">Heritage</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
+                    Preserving the rich cultural legacy and timeless traditions of our ancestral community
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#about" class="btn-primary">Explore Our Heritage</a>
+                    <a href="#timeline" class="btn-secondary text-white border-white hover:bg-white hover:text-blue-900">View Timeline</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AdSense Banner -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="adsense-placeholder">
+            <i class="fas fa-ad"></i>
+            <div>Google AdSense Banner (728x90)</div>
+            <small>Advertisement space - AdSense compatible</small>
+        </div>
+    </div>
+    
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="stats-counter" data-target="500">0</div>
+                    <p class="text-gray-600 font-semibold">Years of Heritage</p>
+                </div>
+                <div class="fade-in">
+                    <div class="stats-counter" data-target="50000">0</div>
+                    <p class="text-gray-600 font-semibold">Community Members</p>
+                </div>
+                <div class="fade-in">
+                    <div class="stats-counter" data-target="25">0</div>
+                    <p class="text-gray-600 font-semibold">Traditions Preserved</p>
+                </div>
+                <div class="fade-in">
+                    <div class="stats-counter" data-target="100">0</div>
+                    <p class="text-gray-600 font-semibold">Cultural Events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        About Vadiyarajulu Community
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        A distinguished community with deep roots in South Indian culture, known for our contributions to art, literature, and spiritual traditions.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <div class="card p-8">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Our Origins</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                The Vadiyarajulu community traces its lineage back to ancient South India, with strong connections to the Vijayanagara Empire and the cultural renaissance of the medieval period. Our ancestors were renowned scholars, artists, and spiritual leaders who contributed significantly to the preservation of Vedic traditions.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                The name "Vadiyarajulu" itself reflects our heritage as custodians of knowledge and wisdom, with "Vadiya" relating to scholarship and "Rajulu" denoting nobility of character and purpose.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-in">
+                        <div class="card p-8">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-4">Cultural Significance</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Our community has been instrumental in preserving classical arts, including Carnatic music, Bharatanatyam, and traditional temple architecture. Many renowned musicians, dancers, and scholars have emerged from our lineage.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                We continue to uphold the values of education, spiritual growth, and service to society that have defined our community for generations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AdSense Rectangle -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="adsense-placeholder">
+            <i class="fas fa-ad"></i>
+            <div>Google AdSense Rectangle (300x250)</div>
+            <small>Advertisement space - AdSense compatible</small>
+        </div>
+    </div>
+    
+    <!-- Historical Timeline Section -->
+    <section id="timeline" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        Historical Timeline
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Journey through the significant milestones in our community's rich history
+                    </p>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="timeline-item fade-in">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">14th Century</h3>
+                        <h4 class="font-semibold text-yellow-600 mb-3">Foundation Era - Vijayanagara Period</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            During the golden age of the Vijayanagara Empire, the Vadiyarajulu community emerged as prominent scholars and administrators. Our ancestors played crucial roles in the court of Krishnadevaraya, contributing to the empire's cultural and intellectual prosperity.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">16th Century</h3>
+                        <h4 class="font-semibold text-yellow-600 mb-3">Cultural Renaissance</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            The community established several centers of learning and patronized classical arts. Notable scholars from our lineage contributed to the development of Telugu and Sanskrit literature, while temple architects designed magnificent structures that stand today.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">18th Century</h3>
+                        <h4 class="font-semibold text-yellow-600 mb-3">Preservation Movement</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            As political upheavals threatened traditional knowledge systems, Vadiyarajulu scholars initiated movements to preserve ancient texts, music compositions, and dance forms. Many palm leaf manuscripts were copied and safeguarded for future generations.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">19th Century</h3>
+                        <h4 class="font-semibold text-yellow-600 mb-3">Educational Reforms</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            The community embraced modern education while maintaining traditional values. Several schools and colleges were established, producing doctors, engineers, and civil servants who served the nation during the independence movement and beyond.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">20th Century</h3>
+                        <h4 class="font-semibold text-yellow-600 mb-3">Modern Integration</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            While adapting to modern times, the Vadiyarajulu community maintained strong cultural bonds. Community organizations were formed globally, connecting members across continents and ensuring the continuation of traditions in diaspora communities.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <h3 class="font-display text-xl font-bold text-gray-800 mb-2">21st Century</h3>
+                        <h4 class="font-semibold text-yellow-600 mb-3">Digital Heritage</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            Today, we leverage technology to preserve and share our heritage. Digital archives, online cultural programs, and virtual community gatherings ensure that our traditions remain vibrant and accessible to younger generations worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section id="blog" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        Community Stories
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Discover inspiring stories, cultural insights, and community updates
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="card overflow-hidden fade-in">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-music text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-bold text-gray-800 mb-3">Preserving Classical Music Traditions</h3>
+                            <p class="text-gray-600 mb-4">
+                                How our community continues to nurture young musicians and preserve the rich tradition of Carnatic music for future generations.
+                            </p>
+                            <a href="#" class="text-yellow-600 font-semibold hover:text-yellow-700">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="card overflow-hidden fade-in">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-book text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-bold text-gray-800 mb-3">Ancient Manuscripts Digitized</h3>
+                            <p class="text-gray-600 mb-4">
+                                A landmark project to digitize rare palm leaf manuscripts has made ancient wisdom accessible to scholars worldwide.
+                            </p>
+                            <a href="#" class="text-yellow-600 font-semibold hover:text-yellow-700">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="card overflow-hidden fade-in">
+                        <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                            <i class="fas fa-users text-white text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-bold text-gray-800 mb-3">Global Community Connect</h3>
+                            <p class="text-gray-600 mb-4">
+                                Annual cultural festivals bring together Vadiyarajulu families from across the globe, strengthening community bonds.
+                            </p>
+                            <a href="#" class="text-yellow-600 font-semibold hover:text-yellow-700">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AdSense Leaderboard -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="adsense-placeholder">
+            <i class="fas fa-ad"></i>
+            <div>Google AdSense Leaderboard (728x90)</div>
+            <small>Advertisement space - AdSense compatible</small>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        Connect With Us
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Join our community and help preserve our rich cultural heritage
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="fade-in">
+                        <div class="card p-8">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-yellow-600 text-xl w-8"></i>
+                                    <span class="text-gray-600">contact@vadiyarajulu.com</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone text-yellow-600 text-xl w-8"></i>
+                                    <span class="text-gray-600">+91 98765 43210</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-yellow-600 text-xl w-8"></i>
+                                    <span class="text-gray-600">Hyderabad, Telangana, India</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-in">
+                        <div class="card p-8">
+                            <h3 class="font-display text-2xl font-bold text-gray-800 mb-6">Send Message</h3>
+                            <form class="space-y-4">
+                                <div>
+                                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                </div>
+                                <div>
+                                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                </div>
+                                <div>
+                                    <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary w-full">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-om text-white text-lg"></i>
+                        </div>
+                        <span class="text-white font-display text-xl font-bold">Vadiyarajulu</span>
+                    </div>
+                    <p class="text-blue-100 leading-relaxed">
+                        Preserving our cultural heritage and connecting communities across the globe.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#timeline" class="footer-link">Timeline</a></li>
+                        <li><a href="#blog" class="footer-link">Blog</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Events</a></li>
+                        <li><a href="#" class="footer-link">Gallery</a></li>
+                        <li><a href="#" class="footer-link">Resources</a></li>
+                        <li><a href="#" class="footer-link">Directory</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link" onclick="openModal('terms')">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link" onclick="openModal('privacy')">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link" onclick="openModal('disclaimer')">Disclaimer</a></li>
+                        <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-divider opacity-30"></div>
+            
+            <div class="text-center text-blue-100">
+                <p>&copy; 2024 Vadiyarajulu Community. All rights reserved. | Designed with ❤️ for cultural preservation</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Modals -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('terms')">&times;</span>
+            <h2 class="font-display text-2xl font-bold mb-4">Terms of Service</h2>
+            <div class="space-y-4 text-gray-600">
+                <p><strong>Last updated:</strong> December 2024</p>
+                <p>Welcome to the Vadiyarajulu Community website. By accessing and using this website, you agree to be bound by these Terms of Service.</p>
+                
+                <h3 class="font-semibold text-gray-800">1. Acceptance of Terms</h3>
+                <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                
+                <h3 class="font-semibold text-gray-800">2. Use License</h3>
+                <p>Permission is granted to temporarily download one copy of the materials on Vadiyarajulu Community's website for personal, non-commercial transitory viewing only.</p>
+                
+                <h3 class="font-semibold text-gray-800">3. Disclaimer</h3>
+                <p>The materials on Vadiyarajulu Community's website are provided on an 'as is' basis. Vadiyarajulu Community makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+                
+                <h3 class="font-semibold text-gray-800">4. Limitations</h3>
+                <p>In no event shall Vadiyarajulu Community or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Vadiyarajulu Community's website.</p>
+                
+                <h3 class="font-semibold text-gray-800">5. Contact Information</h3>
+                <p>If you have any questions about these Terms of Service, please contact us at contact@vadiyarajulu.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('privacy')">&times;</span>
+            <h2 class="font-display text-2xl font-bold mb-4">Privacy Policy</h2>
+            <div class="space-y-4 text-gray-600">
+                <p><strong>Last updated:</strong> December 2024</p>
+                <p>Vadiyarajulu Community respects your privacy and is committed to protecting your personal data.</p>
+                
+                <h3 class="font-semibold text-gray-800">1. Information We Collect</h3>
+                <p>We collect information you provide directly to us, such as when you contact us, subscribe to our newsletter, or participate in community events.</p>
+                
+                <h3 class="font-semibold text-gray-800">2. How We Use Your Information</h3>
+                <p>We use the information we collect to:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Provide and maintain our services</li>
+                    <li>Send you newsletters and community updates</li>
+                    <li>Respond to your inquiries and provide customer support</li>
+                    <li>Improve our website and services</li>
+                </ul>
+                
+                <h3 class="font-semibold text-gray-800">3. Information Sharing</h3>
+                <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
+                
+                <h3 class="font-semibold text-gray-800">4. Google AdSense</h3>
+                <p>We use Google AdSense to display advertisements. Google AdSense may use cookies to serve ads based on your visits to this site and other sites on the Internet.</p>
+                
+                <h3 class="font-semibold text-gray-800">5. Cookies</h3>
+                <p>Our website uses cookies to enhance your browsing experience and provide personalized content.</p>
+                
+                <h3 class="font-semibold text-gray-800">6. Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at contact@vadiyarajulu.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="disclaimerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('disclaimer')">&times;</span>
+            <h2 class="font-display text-2xl font-bold mb-4">Disclaimer</h2>
+            <div class="space-y-4 text-gray-600">
+                <p><strong>Last updated:</strong> December 2024</p>
+                
+                <h3 class="font-semibold text-gray-800">1. General Information</h3>
+                <p>The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, Vadiyarajulu Community excludes all representations, warranties, obligations, and liabilities arising out of or in connection with the information provided on this website.</p>
+                
+                <h3 class="font-semibold text-gray-800">2. Historical Information</h3>
+                <p>While we strive to provide accurate historical information about the Vadiyarajulu community, some content may be based on oral traditions, community records, and historical interpretations. We encourage scholarly research and welcome corrections to any inaccuracies.</p>
+                
+                <h3 class="font-semibold text-gray-800">3. Cultural Content</h3>
+                <p>The cultural practices, traditions, and customs described on this website may vary among different families and regions within the Vadiyarajulu community. This content is provided for educational and cultural preservation purposes.</p>
+                
+                <h3 class="font-semibold text-gray-800">4. External Links</h3>
+                <p>This website may contain links to external websites. We are not responsible for the content, accuracy, or practices of external websites.</p>
+                
+                <h3 class="font-semibold text-gray-800">5. Community Contributions</h3>
+                <p>Some content on this website may be contributed by community members. While we moderate submissions, we cannot guarantee the accuracy of all user-generated content.</p>
+                
+                <h3 class="font-semibold text-gray-800">6. Contact</h3>
+                <p>For questions about this disclaimer or to report inaccuracies, please contact us at contact@vadiyarajulu.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const scrollTop = window.pageYOffset;
+            
+            if (scrollTop > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Show/hide scroll to top button
+            const scrollBtn = document.querySelector('.scroll-to-top');
+            if (scrollTop > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            mobileMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Animated counter
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 20);
+        }
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate counters
+                    if (entry.target.classList.contains('stats-counter')) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        animateCounter(entry.target, target);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.fade-in, .stats-counter').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Modal functions
+        function openModal(type) {
+            const modal = document.getElementById(type + 'Modal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function closeModal(type) {
+            const modal = document.getElementById(type + 'Modal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
+        
+        // Set initial body opacity for fade in effect
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+    </script>
 </body>
-
-<script>
-    // Function to load HTML content into a div using fetch
-    function loadHTML(elementId, url) {
-      fetch(url)
-        .then(response => response.text())
-        .then(data => document.getElementById(elementId).innerHTML = data)
-        .catch(err => console.error('Error loading HTML:', err));
-    }
-
-    // Load header, navigation, footer
-    loadHTML('header', 'header.html');
-    loadHTML('nav', 'navigation.html');
-    loadHTML('footer', 'footer.html');
-    loadHTML('content', 'home.html');
-
-    // Load page-specific content (for example, contact.html)
-    // loadHTML('content', 'history.html');
-  </script>
 </html>
